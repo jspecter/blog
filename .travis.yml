@@ -11,6 +11,8 @@ deploy:
   provider: pages
   skip_cleanup: true
   local_dir: blog/.vuepress/dist
+  repo: jspecter/jspecter.github.io
+  target_branch: master
   github_token: $GITHUB_TOKEN
   keep_history: true
   on:
