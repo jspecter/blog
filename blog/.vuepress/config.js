@@ -1,6 +1,7 @@
 module.exports = {
   title: 'Leslie Zhu',
   description: 'blog about my work and life',
+  permalink: "/:year/:month/:day/:slug",
   theme: '@vuepress/theme-blog', // OR shortcut: @vuepress/blog
   themeConfig: {
     /**
@@ -19,24 +20,20 @@ module.exports = {
       },
       {
         text: '技术',
-        link: '/tech',
+        link: '/tag/tech/',
       },
       {
         text: '生活',
-        link: '/life',
+        link: '/tag/life/',
       },
       {
         text: '其它',
-        link: '/others',
+        link: '/tag/others/',
       },
       {
         text: '标签',
         link: '/tag/',
-      },
-      {
-        text: 'Github',
-        link: 'https://github.com/jspecter',
-      },
+      }
     ],
     /**
      * Ref: https://vuepress-theme-blog.ulivz.com/#footer
@@ -56,14 +53,13 @@ module.exports = {
       ],
     },
 
-    plugins:{
-        '@vssue/vuepress-plugin-vssue':{
+    comment:{
+            service:"vssue",
             platform:'github-v4',
             owner:"jspecter",
             repo:"jspecter.github.io",
             clientId:"933f75f09e5a171518b1",
             clientSecret:"0daddd3dd73391658778aa4492aa879952821f3d"
-        }
     }
   },
 }
