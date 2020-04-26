@@ -14,11 +14,23 @@ module.exports = {
      */
     nav: [
       {
-        text: 'Blog',
+        text: '全部',
         link: '/',
       },
       {
-        text: 'Tags',
+        text: '技术',
+        link: '/tech',
+      },
+      {
+        text: '生活',
+        link: '/life',
+      },
+      {
+        text: '其它',
+        link: '/others',
+      },
+      {
+        text: '标签',
         link: '/tag/',
       },
       {
@@ -43,5 +55,15 @@ module.exports = {
         },
       ],
     },
+
+    plugins:{
+        '@vssue/vuepress-plugin-vssue':{
+            platform:'github-v4',
+            owner:"jspecter",
+            repo:"jspecter.github.io",
+            clientId:"933f75f09e5a171518b1",
+            clientSecret:"0daddd3dd73391658778aa4492aa879952821f3d"
+        }
+    }
   },
 }
